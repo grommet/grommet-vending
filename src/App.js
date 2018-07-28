@@ -14,7 +14,7 @@ import Service from './screens/Service';
 import Services from './screens/Services';
 
 export default () => (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Server>
       <Grommet>
         <Grid
