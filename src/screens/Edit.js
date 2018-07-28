@@ -72,6 +72,8 @@ export default class Edit extends Component {
                       margin={{ vertical: 'large' }}
                       direction="row-responsive"
                       justify="between"
+                      align="center"
+                      gap="medium"
                     >
                       <Button
                         type="submit"

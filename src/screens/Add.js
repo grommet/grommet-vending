@@ -69,6 +69,8 @@ export default class Add extends Component {
                 margin={{ vertical: 'large' }}
                 direction="row-responsive"
                 justify="between"
+                align="center"
+                gap="medium"
               >
                 <Button
                   type="submit"

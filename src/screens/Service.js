@@ -9,7 +9,7 @@ import Loader from '../Loader';
 
 const Property = ({ name, value }) => (
   <Box direction="row-responsive" gap="small">
-    <Box basis="small">
+    <Box basis="1/4">
       <Text>
         {name}
       </Text>
