@@ -27,7 +27,7 @@ export default class Server extends Component {
     }
 
     const templates = [];
-    for (let i = 1; i <= 4; i += 1) {
+    for (let i = 1; i <= 47; i += 1) {
       templates.push({ id: `template-${i}`, name: `template ${i}` });
     }
 
@@ -72,7 +72,12 @@ export default class Server extends Component {
     const { context, services } = this.state;
     const now = (new Date()).toISOString();
     const nextServices = services
-      .concat({ ...service, created: now })
+      .concat({
+        ...service,
+        id: `service-${(new Date()).toISOString()}`,
+        created: now,
+        status: 'ok',
+      })
       .sort((s1, s2) => (s1.name > s2.name ? 1 : -1));
     this.setState({
       context: {

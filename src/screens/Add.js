@@ -21,7 +21,7 @@ export default class Add extends Component {
 
   render() {
     const { history } = this.props;
-    const { name, template } = this.state;
+    const { name, template, templates: stateTemplates } = this.state;
     return (
       <Context.Consumer>
         {({ templates, onCreate }) => (
@@ -45,8 +45,17 @@ export default class Add extends Component {
               </FormField>
               <FormField label="Template">
                 <Select
-                  options={templates}
+                  options={stateTemplates || templates}
                   value={template.name || ''}
+                  onSearch={(search) => {
+                    if (search) {
+                      const exp = new RegExp(search, 'i');
+                      const nextTemplates = templates.filter(t => exp.test(t.name));
+                      this.setState({ templates: nextTemplates });
+                    } else {
+                      this.setState({ templates: undefined });
+                    }
+                  }}
                   onChange={event => this.setState({ template: event.option })}
                 >
                   {option => (

@@ -10,7 +10,7 @@ import Context from './Context';
 const Header = ({ history }) => (
   <Context.Consumer>
     {({ session, onLogout }) => (
-      <Box direction="row" justify="between" align="center">
+      <Box direction="row" justify="center" align="center">
         <RoutedButton path={session ? '/' : '/login'} hoverIndicator>
           <Box
             pad="small"
@@ -18,10 +18,10 @@ const Header = ({ history }) => (
             align="center"
             gap="small"
           >
-            <Vend />
             <Text size="large">
               Serv-O-Mat
             </Text>
+            <Vend />
           </Box>
         </RoutedButton>
         {session && (
