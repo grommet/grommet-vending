@@ -27,3 +27,11 @@ To run this application, execute the following commands:
     ```
     $ npm run check
     ```
+
+TODO:
+
+filters
+batch mode + multiple select
+  delete everything using a certain template
+compare/diff
+table?

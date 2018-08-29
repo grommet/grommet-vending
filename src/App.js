@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import {
-  Grommet, Box, Grid, ResponsiveContext,
+  Grommet, Box, Grid, ResponsiveContext, grommet,
 } from 'grommet';
 
 import Server from './Server';
@@ -27,7 +27,7 @@ const Content = () => (
       >
         <Box gridArea="main">
           <Route path="/" component={Header} />
-          <Box pad={responsive === 'narrow' && { horizontal: 'large' }}>
+          <Box pad={responsive === 'narrow' ? { horizontal: 'large' } : undefined}>
             <Route exact path="/" component={Services} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/add" component={Add} />
@@ -43,7 +43,7 @@ const Content = () => (
 
 export default () => (
   <Router basename={process.env.PUBLIC_URL}>
-    <Grommet>
+    <Grommet theme={grommet}>
       <Server>
         <Content />
       </Server>

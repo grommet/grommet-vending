@@ -1,8 +1,8 @@
-import path from 'path';
-import webpack from 'webpack';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
+const path = require('path');
+const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-export default {
+module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve('./dist'),
@@ -11,7 +11,6 @@ export default {
   },
   plugins: [
     new CopyWebpackPlugin([{ from: './public' }]),
-    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {

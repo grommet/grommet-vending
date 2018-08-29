@@ -64,7 +64,7 @@ export default class Services extends Component {
                     )}
                   </InfiniteScroll>
                 ) : (
-                  <Box animation="medium" pad="large" background="light-1" />
+                  <Box margin="medium" pad="large" background="light-1" />
                 )}
               </Grid>
             </Box>
