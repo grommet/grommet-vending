@@ -17,17 +17,17 @@ const Content = () => (
   <ResponsiveContext.Consumer>
     {responsive => (
       <Grid
-        columns={responsive === 'wide'
+        columns={responsive !== 'small'
           ? ['flex', 'large', 'flex']
           : ['flex']}
         rows={['flex']}
-        areas={responsive === 'wide'
+        areas={responsive !== 'small'
           ? [{ name: 'main', start: [1, 0], end: [1, 0] }]
           : [{ name: 'main', start: [0, 0], end: [0, 0] }]}
       >
         <Box gridArea="main">
           <Route path="/" component={Header} />
-          <Box pad={responsive === 'narrow' ? { horizontal: 'large' } : undefined}>
+          <Box pad={responsive === 'small' ? { horizontal: 'large' } : undefined}>
             <Route exact path="/" component={Services} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/add" component={Add} />
