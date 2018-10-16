@@ -17,6 +17,7 @@ const Content = () => (
   <ResponsiveContext.Consumer>
     {responsive => (
       <Grid
+        fill
         columns={responsive !== 'small'
           ? ['flex', 'large', 'flex']
           : ['flex']}
