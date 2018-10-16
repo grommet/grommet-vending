@@ -14,7 +14,7 @@
     "Eric Soderberg"
   ],
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "PUBLIC_URL=/grommet-vending webpack --mode production",
     "check": "npm run lint && npm run test",
     "lint": "eslint src",
     "test": "jest",
