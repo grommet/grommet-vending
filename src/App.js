@@ -43,7 +43,7 @@ const Content = () => (
 );
 
 export default () => (
-  <Router basename={process.env.PUBLIC_URL}>
+  <Router basename="/grommet-vending">
     <Grommet theme={grommet}>
       <Server>
         <Content />
