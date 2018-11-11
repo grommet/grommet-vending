@@ -21,8 +21,8 @@
     "start": "webpack-dev-server --mode development --open"
   },
   "dependencies": {
-    "grommet": "https://github.com/grommet/grommet/tarball/NEXT-stable",
-    "grommet-icons": "https://github.com/grommet/grommet-icons/tarball/stable",
+    "grommet": "^2.0.1",
+    "grommet-icons": "^3.2.0",
     "prop-types": "^15.6.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
